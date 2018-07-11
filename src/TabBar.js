@@ -128,8 +128,7 @@ export default class TabBar<T: *> extends React.Component<Props<T>, State> {
     }
 
     if (
-      prevProps.navigationState.routes.length !==
-        this.props.navigationState.routes.length ||
+      prevProps.navigationState.routes !== this.props.navigationState.routes ||
       prevProps.layout.width !== this.props.layout.width
     ) {
       this._resetScroll(this.props.navigationState.index, false);
@@ -520,7 +519,7 @@ const styles = StyleSheet.create({
     overflow: Platform.OS === 'web' ? ('auto': any) : 'scroll',
   },
   tabBar: {
-    backgroundColor: '#2196f3',
+    backgroundColor: '#3F9ED4',
     elevation: 4,
     shadowColor: 'black',
     shadowOpacity: 0.1,
